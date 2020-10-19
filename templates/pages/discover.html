@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Discover other users</h3>
+
+{% for i in object_list %}
+    {% if i != user %}
+        <p><a href='/profiles/{{i}}'>{{i}}</a></p>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}
